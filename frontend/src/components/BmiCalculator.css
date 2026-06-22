@@ -1,0 +1,62 @@
+.bmi-panel {
+  padding: 22px;
+}
+
+.bmi-note {
+  margin-bottom: 18px;
+  color: #425046;
+}
+
+.bmi-form {
+  display: grid;
+  gap: 14px;
+  margin-bottom: 24px;
+}
+
+.bmi-form label {
+  display: grid;
+  gap: 8px;
+  color: #425046;
+  font-weight: 700;
+}
+
+.bmi-form input,
+.bmi-form select {
+  width: 100%;
+  min-height: 46px;
+  padding: 0 12px;
+  border: 1px solid #cdd8cf;
+  border-radius: 8px;
+  background: white;
+  color: #17201b;
+}
+
+.bmi-output {
+  border: 1px solid #d9e2da;
+  border-radius: 12px;
+  padding: 20px;
+  background: #f8faf7;
+}
+
+.bmi-score {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 96px;
+  height: 96px;
+  margin-bottom: 14px;
+  border-radius: 999px;
+  background: #d9eae3;
+  font-size: 2rem;
+  font-weight: 800;
+}
+
+.bmi-range,
+.bmi-legend {
+  margin-top: 12px;
+  color: #425046;
+}
+
+.bmi-legend div {
+  margin-top: 6px;
+}

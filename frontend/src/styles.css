@@ -1,0 +1,443 @@
+:root {
+  color: #17201b;
+  background: #edf2ec;
+  font-family: Inter, ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  min-width: 320px;
+}
+
+button,
+input,
+select {
+  font: inherit;
+}
+
+button {
+  cursor: pointer;
+}
+
+.login-shell {
+  display: grid;
+  grid-template-columns: minmax(0, 1.05fr) minmax(320px, 0.95fr);
+  min-height: 100vh;
+}
+
+.brand-panel {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  gap: 22px;
+  padding: 64px;
+  color: white;
+  background:
+    linear-gradient(rgba(18, 42, 34, 0.76), rgba(18, 42, 34, 0.66)),
+    url("./img/fitness.gif") center/cover;
+}
+
+.brand-panel h1,
+.topbar h1 {
+  margin: 0;
+  font-size: clamp(2rem, 5vw, 4.5rem);
+}
+
+.brand-panel p {
+  max-width: 520px;
+  margin: 0;
+  color: #e6f2ea;
+  font-size: 1.2rem;
+}
+
+.brand-mark {
+  display: grid;
+  width: 62px;
+  height: 62px;
+  place-items: center;
+  border: 1px solid rgba(255, 255, 255, 0.5);
+  border-radius: 8px;
+  background: rgba(255, 255, 255, 0.14);
+}
+
+.stats-row {
+  display: grid;
+  grid-template-columns: auto auto auto auto;
+  gap: 12px 18px;
+  align-items: baseline;
+  width: fit-content;
+  padding-top: 16px;
+  border-top: 1px solid rgba(255, 255, 255, 0.3);
+}
+
+.stats-row span {
+  color: #cde2d4;
+}
+
+.stats-row strong {
+  font-size: 2rem;
+}
+
+.login-panel {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  padding: 40px;
+  background: #f8faf7;
+}
+
+.module-switch {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 8px;
+  margin-bottom: 28px;
+  padding: 6px;
+  border: 1px solid #d8e0d7;
+  border-radius: 8px;
+  background: white;
+}
+
+.module-switch button,
+.primary-button,
+.icon-button {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  min-height: 44px;
+  border: 0;
+  border-radius: 8px;
+}
+
+.module-switch button {
+  color: #425046;
+  background: transparent;
+}
+
+.module-switch button.active,
+.primary-button {
+  color: white;
+  background: #0f6b4b;
+}
+
+form {
+  display: grid;
+  gap: 18px;
+}
+
+label {
+  display: grid;
+  gap: 8px;
+  color: #425046;
+  font-weight: 700;
+}
+
+input,
+select {
+  width: 100%;
+  min-height: 46px;
+  padding: 0 12px;
+  border: 1px solid #cdd8cf;
+  border-radius: 8px;
+  background: white;
+  color: #17201b;
+}
+
+.error {
+  margin: 0;
+  color: #a13d2d;
+}
+
+.app-shell {
+  min-height: 100vh;
+  padding: 32px;
+  background: #edf2ec;
+}
+
+.topbar {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 16px;
+  margin-bottom: 28px;
+}
+
+.topbar h1 {
+  font-size: 2.4rem;
+}
+
+.eyebrow {
+  color: #0f6b4b;
+  font-size: 0.78rem;
+  font-weight: 800;
+  letter-spacing: 0;
+}
+
+.icon-button {
+  width: 46px;
+  border: 1px solid #d4ded5;
+  background: white;
+  color: #17201b;
+}
+
+.dashboard-grid {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) minmax(300px, 420px);
+  gap: 18px;
+  margin-bottom: 18px;
+}
+
+.panel,
+.plan-card {
+  border: 1px solid #d9e2da;
+  border-radius: 8px;
+  background: white;
+  box-shadow: 0 12px 28px rgba(31, 50, 38, 0.08);
+}
+
+.panel {
+  padding: 22px;
+}
+
+.auth-panel {
+  display: grid;
+  gap: 18px;
+}
+
+.auth-form {
+  display: grid;
+  gap: 18px;
+}
+
+.google-button {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+  width: 100%;
+  min-height: 46px;
+  border: 1px solid #d9e2da;
+  border-radius: 8px;
+  background: white;
+  color: #17201b;
+}
+
+.divider {
+  text-align: center;
+  color: #7a8a7f;
+  position: relative;
+}
+
+.divider::before,
+.divider::after {
+  content: "";
+  position: absolute;
+  top: 50%;
+  width: 40%;
+  height: 1px;
+  background: #d9e2da;
+}
+
+.divider::before {
+  left: 0;
+}
+
+.divider::after {
+  right: 0;
+}
+
+.meal-plan-table-wrapper,
+.exercise-panel {
+  overflow: auto;
+  margin: 16px 0;
+}
+
+.meal-plan-table,
+.workout-table {
+  width: 100%;
+  border-collapse: collapse;
+}
+
+.meal-plan-table th,
+.meal-plan-table td,
+.workout-table th,
+.workout-table td {
+  padding: 12px 14px;
+  border: 1px solid #e4eae5;
+  text-align: left;
+}
+
+.meal-plan-table th,
+.workout-table th {
+  background: #f4f8f4;
+  color: #425046;
+}
+
+.small-input {
+  width: 100%;
+  margin-top: 8px;
+}
+
+.exercise-row {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  gap: 12px;
+  margin-bottom: 12px;
+}
+
+.secondary-button {
+  background: #e6f2ea;
+  color: #0f6b4b;
+}
+
+.success-message,
+.notice {
+  color: #0f6b4b;
+  font-weight: 600;
+  margin: 0;
+}
+
+.topbar-actions {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
+.menu-dropdown {
+  position: relative;
+}
+
+.menu-button {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  min-height: 44px;
+  border: 1px solid #d9e2da;
+  border-radius: 8px;
+  background: white;
+  padding: 0 16px;
+}
+
+.menu-panel {
+  position: absolute;
+  right: 0;
+  top: calc(100% + 10px);
+  width: 220px;
+  border: 1px solid #d9e2da;
+  border-radius: 10px;
+  background: white;
+  box-shadow: 0 18px 34px rgba(31, 50, 38, 0.12);
+  z-index: 10;
+  padding: 10px;
+}
+
+.dropdown-item {
+  width: 100%;
+  display: block;
+  text-align: left;
+  padding: 12px 14px;
+  border: none;
+  background: transparent;
+  color: #17201b;
+  border-radius: 8px;
+}
+
+.dropdown-item:hover,
+.dropdown-item.active {
+  background: #e6f2ea;
+}
+
+.exercise-item {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 12px;
+  padding: 14px;
+  border: 1px solid #e4eae5;
+  border-radius: 10px;
+  margin-bottom: 12px;
+}
+
+.routine-summary {
+  display: flex;
+  gap: 16px;
+  margin-bottom: 18px;
+}
+
+@media (max-width: 900px) {
+  .exercise-row {
+    grid-template-columns: 1fr;
+  }
+
+  .dashboard-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .topbar {
+    flex-wrap: wrap;
+  }
+}
+
+.panel h2 {
+  margin: 0 0 16px;
+}
+
+.list,
+.stack-form {
+  display: grid;
+  gap: 12px;
+}
+
+.list-item {
+  display: flex;
+  gap: 12px;
+  align-items: center;
+  padding: 12px;
+  border: 1px solid #e4eae5;
+  border-radius: 8px;
+}
+
+.list-item span,
+.plan-card span {
+  display: block;
+  color: #66736b;
+  font-size: 0.92rem;
+}
+
+.plan-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+  gap: 18px;
+}
+
+.plan-card {
+  display: flex;
+  gap: 14px;
+  padding: 20px;
+}
+
+.plan-card h3,
+.plan-card p {
+  margin: 0 0 6px;
+}
+
+@media (max-width: 800px) {
+  .login-shell,
+  .dashboard-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .brand-panel,
+  .login-panel,
+  .app-shell {
+    padding: 24px;
+  }
+
+  .brand-panel {
+    min-height: 42vh;
+  }
+}
