@@ -8,7 +8,7 @@ const initialRoute = rawPath.startsWith("/admin")
   ? "client"
   : "default";
 
-if (!rawPath.startsWith("/admin") && !rawPath.startsWith("/user")) {
+if (!rawPath.startsWith("/admin") && !rawPath.startsWith("/user") && !rawPath.startsWith("/vfitthub.github.io")) {
   window.history.replaceState(null, "", "/user");
 }
 
