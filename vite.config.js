@@ -7,7 +7,7 @@ export default defineConfig(({ command }) => {
 
   return {
     plugins: [react()],
-    base: "/",
+    base: isDev ? "/" : "/vfitthub.github.io/",
 
     server: isDev
       ? {
