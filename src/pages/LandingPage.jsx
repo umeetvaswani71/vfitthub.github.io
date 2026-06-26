@@ -1,7 +1,10 @@
 import { Activity, ArrowRightCircle } from "lucide-react";
 import { useEffect, useState } from "react";
 import { API_BASE } from "../lib/api.js";
+import Tab from 'react-bootstrap/Tab';
+import Tabs from 'react-bootstrap/Tabs';
 import BmiCalculator from "../components/BmiCalculator.jsx";
+import "bootstrap/dist/css/bootstrap.min.css";
 import "./LandingPage.css";
 
 const demoCredentials = {
@@ -11,6 +14,7 @@ const demoCredentials = {
 
 export default function LandingPage({ mode, setMode, onLogin }) {
   const [form, setForm] = useState(demoCredentials[mode]);
+  const [key, setKey] = useState('bmicalculator');
   const [error, setError] = useState("");
   const [loading, setLoading] = useState(false);
   const [showRegister, setShowRegister] = useState(false);
@@ -45,8 +49,22 @@ export default function LandingPage({ mode, setMode, onLogin }) {
       </section>
 
       <section className="login-panel">
-        <div className="auth-panel">
-          <BmiCalculator />
+      <div className="auth-panel">
+        <Tabs
+          defaultActiveKey="bmicalculator"
+          id="fill-tab-example"
+          className="mb-3"
+          fill
+        >
+          <Tab eventKey="bmicalculator" title="BMI Calculator">
+            <BmiCalculator />
+          </Tab>
+          <Tab eventKey="bodyfatpercentage" title="Body Fat Percentage">
+             <div className="panel bmi-panel">
+              Tab content for Body Fat Percentage
+             </div>
+          </Tab>
+        </Tabs>
         </div>
       </section>
     </main>

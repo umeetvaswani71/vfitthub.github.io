@@ -20,6 +20,45 @@
   font-weight: 700;
 }
 
+.bmi-form label.radio-group {
+  display: inline-flex;
+  gap: 8px;
+  color: #425046;
+  font-weight: 700;
+  width: 50%;
+}
+
+label.radio-group {
+    display: flex;
+    align-items: center;
+    gap: 6px;
+    cursor: pointer;
+    margin: 0;
+}
+
+.bmi-form input[type="radio"] {
+  width: 10%;
+  height: 12px;
+  padding: 0;
+  border: solid #cdd8cf;
+  border-radius: 10px;
+  background: white;
+  color: #17201b;
+}
+
+.height-selector {
+  display: flex;
+  gap: 10px;
+}
+.height-selector select {
+  flex: 1;
+}
+.height-selector > div {
+  display: flex;
+  align-items: center;
+  gap: 4px;
+}
+
 .bmi-form input,
 .bmi-form select {
   width: 100%;
