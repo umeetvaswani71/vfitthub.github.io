@@ -34,7 +34,6 @@ button {
   flex-direction: column;
   justify-content: center;
   gap: 22px;
-  padding: 64px;
   color: white;
   background:
     linear-gradient(rgba(18, 42, 34, 0.76), rgba(18, 42, 34, 0.66)),
@@ -205,7 +204,7 @@ select {
 
 .auth-panel {
   display: grid;
-  gap: 18px;
+  gap: 0px;
 }
 
 .auth-form {

@@ -5,15 +5,60 @@
 }
 
 .brand-panel {
+  position: relative;
+  padding: 0;
+  color: white;
+  overflow: hidden;
+}
+
+.brand-carousel,
+.brand-carousel .carousel-inner,
+.brand-carousel .carousel-item {
+  width: 100%;
+  height: 100%;
+}
+
+.brand-carousel {
+  position: absolute;
+  inset: 0;
+  z-index: 0;
+}
+
+.brand-carousel .carousel-item {
+  min-height: 100%;
+}
+
+.brand-slide-content {
+  min-height: 100%;
+  height: 100%;
+  padding: 64px;
+  border-radius: 0;
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+
+.brand-content {
+  position: relative;
+  z-index: 1;
   display: flex;
   flex-direction: column;
   justify-content: center;
   gap: 22px;
-  padding: 64px;
-  color: white;
-  background:
-    linear-gradient(rgba(18, 42, 34, 0.76), rgba(18, 42, 34, 0.66)),
-    '../img/fitness.gif' center/cover;
+  min-height: 100%;
+  padding: 60px 10px;
+}
+
+.brand-carousel .carousel-control-prev,
+.brand-carousel .carousel-control-next {
+  width: 44px;
+}
+
+.brand-carousel .carousel-indicators [data-bs-target] {
+  width: 10px;
+  height: 10px;
+  border-radius: 50%;
+  background-color: rgba(255, 255, 255, 0.9);
 }
 
 .brand-panel h1,
@@ -101,7 +146,7 @@
 
 .auth-panel {
   display: grid;
-  gap: 18px;
+  gap: 0px;
 }
 
 .auth-form {
